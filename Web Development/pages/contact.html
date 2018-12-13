@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Everybody's Closet | Contact US	</title>
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/contactStyle.css">
+		<script src="../cgi-bin/formValidation.js"></script>
+	</head>
+	
+	<body onload="setDate();">
+		<header>
+			<div class="container">
+				<div id="branding">
+					<h1><a href="../index.html">Everybody's Closet</h1></a>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li class="current"><a href="contact.html">Contact</a></li>
+						<li><a href="rules.html">Rules for Donation</a></li>
+					</ul>	
+			</div>
+		</header>
+		
+		<section>
+			<div class="container">
+				<h3> Contact Us</h3>
+				<form action="submit.html"  onsubmit="return validateForm();" id="contactForm">
+					<p>
+						<label for="name">Name<span class="requiredInput">*</span></label>
+						<input name="name" id="name" required type="text">
+					</p>
+					<p>
+						<label for="email">Email Address<span class="requiredInput">*</span></label>
+						<input name="email" id="email"  required placeholder="name@email.com" type="text">
+					</p>
+					
+					<p>
+					<label>Date:</label>
+					<input type="text" id="date" name="date" readonly>
+					</p>
+					
+					<p>
+						<label for="refer">How did you hear about us?</label>
+							<select>
+								<option value="null">Select One</option>
+								<option value="1">Social Media</option>
+								<option value="2">Newspaper</option>
+								<option value="3">Friend</option>
+								<option value="4">Other</option>
+							</select>
+					</p>
+					<p>
+						<label for="message">Message</label>
+						<textarea name="message"  maxlength="500" id="message" rows="5" cols="40">
+						</textarea>
+					</p>
+					<p>
+						<input type="submit" id="sendBtn" value="Send">
+					</p>
+					<p class="requiredInput"> * - Required entry</p>
+				</form>
+			</div>
+		</section>
+		
+		<footer> 
+			<p>Everybody's Closet, Copyright &copy; 2018</p>
+		</footer>	
+	</body>
+</html>
